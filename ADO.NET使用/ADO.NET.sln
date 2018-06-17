@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01SqlConnection", "01SqlConnection\01SqlConnection.csproj", "{08B0324F-44F0-490D-A7FE-AFC88631126E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02SqlCommand", "02SqlCommand\02SqlCommand.csproj", "{2B3505F4-920E-45C2-A7C2-E9F52B7E60FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03SqlConnectionStringBuilder", "03SqlConnectionStringBuilder\03SqlConnectionStringBuilder.csproj", "{4D683550-43ED-416F-8625-3980DE5045FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05用户注册", "05用户注册\05用户注册.csproj", "{5C9BD831-23F1-4125-8BB8-B73F7FE720A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04用户登录&使用配置文件", "04用户登录&使用配置文件\04用户登录&使用配置文件.csproj", "{A95709A0-DD2A-4F3B-9564-F2630B409381}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06数据导入", "06数据导入\06数据导入.csproj", "{DBA1AF21-3203-4CD8-A591-643ECD8800BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07实现下拉列表选取省市&数据导出", "07实现下拉列表选取省市&数据导出\07实现下拉列表选取省市&数据导出.csproj", "{25EDFA32-0F19-4258-9390-5A27616C951C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08数据导出到xml文件", "08数据导出到xml文件\08数据导出到xml文件.csproj", "{1AE5251B-1823-478B-A1E2-8AFA0AC51FBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08B0324F-44F0-490D-A7FE-AFC88631126E}.Debug|x86.ActiveCfg = Debug|x86
+		{08B0324F-44F0-490D-A7FE-AFC88631126E}.Debug|x86.Build.0 = Debug|x86
+		{08B0324F-44F0-490D-A7FE-AFC88631126E}.Release|x86.ActiveCfg = Release|x86
+		{08B0324F-44F0-490D-A7FE-AFC88631126E}.Release|x86.Build.0 = Release|x86
+		{2B3505F4-920E-45C2-A7C2-E9F52B7E60FA}.Debug|x86.ActiveCfg = Debug|x86
+		{2B3505F4-920E-45C2-A7C2-E9F52B7E60FA}.Debug|x86.Build.0 = Debug|x86
+		{2B3505F4-920E-45C2-A7C2-E9F52B7E60FA}.Release|x86.ActiveCfg = Release|x86
+		{2B3505F4-920E-45C2-A7C2-E9F52B7E60FA}.Release|x86.Build.0 = Release|x86
+		{4D683550-43ED-416F-8625-3980DE5045FF}.Debug|x86.ActiveCfg = Debug|x86
+		{4D683550-43ED-416F-8625-3980DE5045FF}.Debug|x86.Build.0 = Debug|x86
+		{4D683550-43ED-416F-8625-3980DE5045FF}.Release|x86.ActiveCfg = Release|x86
+		{4D683550-43ED-416F-8625-3980DE5045FF}.Release|x86.Build.0 = Release|x86
+		{5C9BD831-23F1-4125-8BB8-B73F7FE720A3}.Debug|x86.ActiveCfg = Debug|x86
+		{5C9BD831-23F1-4125-8BB8-B73F7FE720A3}.Debug|x86.Build.0 = Debug|x86
+		{5C9BD831-23F1-4125-8BB8-B73F7FE720A3}.Release|x86.ActiveCfg = Release|x86
+		{5C9BD831-23F1-4125-8BB8-B73F7FE720A3}.Release|x86.Build.0 = Release|x86
+		{A95709A0-DD2A-4F3B-9564-F2630B409381}.Debug|x86.ActiveCfg = Debug|x86
+		{A95709A0-DD2A-4F3B-9564-F2630B409381}.Debug|x86.Build.0 = Debug|x86
+		{A95709A0-DD2A-4F3B-9564-F2630B409381}.Release|x86.ActiveCfg = Release|x86
+		{A95709A0-DD2A-4F3B-9564-F2630B409381}.Release|x86.Build.0 = Release|x86
+		{DBA1AF21-3203-4CD8-A591-643ECD8800BE}.Debug|x86.ActiveCfg = Debug|x86
+		{DBA1AF21-3203-4CD8-A591-643ECD8800BE}.Debug|x86.Build.0 = Debug|x86
+		{DBA1AF21-3203-4CD8-A591-643ECD8800BE}.Release|x86.ActiveCfg = Release|x86
+		{DBA1AF21-3203-4CD8-A591-643ECD8800BE}.Release|x86.Build.0 = Release|x86
+		{25EDFA32-0F19-4258-9390-5A27616C951C}.Debug|x86.ActiveCfg = Debug|x86
+		{25EDFA32-0F19-4258-9390-5A27616C951C}.Debug|x86.Build.0 = Debug|x86
+		{25EDFA32-0F19-4258-9390-5A27616C951C}.Release|x86.ActiveCfg = Release|x86
+		{25EDFA32-0F19-4258-9390-5A27616C951C}.Release|x86.Build.0 = Release|x86
+		{1AE5251B-1823-478B-A1E2-8AFA0AC51FBC}.Debug|x86.ActiveCfg = Debug|x86
+		{1AE5251B-1823-478B-A1E2-8AFA0AC51FBC}.Debug|x86.Build.0 = Debug|x86
+		{1AE5251B-1823-478B-A1E2-8AFA0AC51FBC}.Release|x86.ActiveCfg = Release|x86
+		{1AE5251B-1823-478B-A1E2-8AFA0AC51FBC}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

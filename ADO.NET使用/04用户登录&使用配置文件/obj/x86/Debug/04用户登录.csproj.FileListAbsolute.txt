@@ -1,0 +1,8 @@
+D:\Documents\Visual Studio 2010\Projects\ADO.NET\04用户登录\bin\Debug\04用户登录.exe
+D:\Documents\Visual Studio 2010\Projects\ADO.NET\04用户登录\bin\Debug\04用户登录.pdb
+D:\Documents\Visual Studio 2010\Projects\ADO.NET\04用户登录\obj\x86\Debug\_04用户登录.LogInFrm.resources
+D:\Documents\Visual Studio 2010\Projects\ADO.NET\04用户登录\obj\x86\Debug\_04用户登录.Properties.Resources.resources
+D:\Documents\Visual Studio 2010\Projects\ADO.NET\04用户登录\obj\x86\Debug\04用户登录.csproj.GenerateResource.Cache
+D:\Documents\Visual Studio 2010\Projects\ADO.NET\04用户登录\obj\x86\Debug\04用户登录.exe
+D:\Documents\Visual Studio 2010\Projects\ADO.NET\04用户登录\obj\x86\Debug\04用户登录.pdb
+D:\Documents\Visual Studio 2010\Projects\ADO.NET\04用户登录\bin\Debug\04用户登录.exe.config
