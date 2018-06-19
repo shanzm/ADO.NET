@@ -5,6 +5,13 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Threading;
 
+
+///SqlConnection对象只能被打开一次。
+///但是在Close()后可以再进行Open()操作。
+///但是在Dispose()之后就不能再Open()了。
+
+
+
 namespace _01SqlConnection
 {
     class Program

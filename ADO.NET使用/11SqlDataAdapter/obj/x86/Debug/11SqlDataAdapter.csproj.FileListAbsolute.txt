@@ -1,0 +1,8 @@
+D:\Documents\Visual Studio 2010\Projects\ADO.NET\11SqlDataAdapter\bin\Debug\11SqlDataAdapter.exe.config
+D:\Documents\Visual Studio 2010\Projects\ADO.NET\11SqlDataAdapter\bin\Debug\11SqlDataAdapter.exe
+D:\Documents\Visual Studio 2010\Projects\ADO.NET\11SqlDataAdapter\bin\Debug\11SqlDataAdapter.pdb
+D:\Documents\Visual Studio 2010\Projects\ADO.NET\11SqlDataAdapter\obj\x86\Debug\_11SqlDataAdapter.Properties.Resources.resources
+D:\Documents\Visual Studio 2010\Projects\ADO.NET\11SqlDataAdapter\obj\x86\Debug\11SqlDataAdapter.csproj.GenerateResource.Cache
+D:\Documents\Visual Studio 2010\Projects\ADO.NET\11SqlDataAdapter\obj\x86\Debug\11SqlDataAdapter.exe
+D:\Documents\Visual Studio 2010\Projects\ADO.NET\11SqlDataAdapter\obj\x86\Debug\11SqlDataAdapter.pdb
+D:\Documents\Visual Studio 2010\Projects\ADO.NET\11SqlDataAdapter\obj\x86\Debug\_11SqlDataAdapter.MaimFrm.resources
