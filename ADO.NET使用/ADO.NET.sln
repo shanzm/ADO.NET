@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11SqlDataAdapter", "11SqlDa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12快速增删改查（crud)+SqlCommandBuilder", "12快速增删改查（crud)+SqlCommandBuilder\12快速增删改查（crud)+SqlCommandBuilder.csproj", "{5D353336-E5A8-4AC5-B02C-78B4DED7AE26}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13观察者模式（非委托实现）+中介者模式", "13观察者模式（非委托实现）+中介者模式\13观察者模式（非委托实现）+中介者模式.csproj", "{D6F57781-E6B1-405E-B36D-B2BD317E43E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -79,6 +81,10 @@ Global
 		{5D353336-E5A8-4AC5-B02C-78B4DED7AE26}.Debug|x86.Build.0 = Debug|x86
 		{5D353336-E5A8-4AC5-B02C-78B4DED7AE26}.Release|x86.ActiveCfg = Release|x86
 		{5D353336-E5A8-4AC5-B02C-78B4DED7AE26}.Release|x86.Build.0 = Release|x86
+		{D6F57781-E6B1-405E-B36D-B2BD317E43E4}.Debug|x86.ActiveCfg = Debug|x86
+		{D6F57781-E6B1-405E-B36D-B2BD317E43E4}.Debug|x86.Build.0 = Debug|x86
+		{D6F57781-E6B1-405E-B36D-B2BD317E43E4}.Release|x86.ActiveCfg = Release|x86
+		{D6F57781-E6B1-405E-B36D-B2BD317E43E4}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

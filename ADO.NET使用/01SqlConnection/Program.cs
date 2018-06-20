@@ -5,6 +5,12 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Threading;
 
+///注意在ADO.Net 主要是使用的using System.Data.SqlClient命名空间
+///我们常用就五个类
+///SqlConnection、SqlCommand、SqlParameter、SqlDataReader、SqlDataAdapter
+
+
+
 
 ///SqlConnection对象只能被打开一次。
 ///但是在Close()后可以再进行Open()操作。
