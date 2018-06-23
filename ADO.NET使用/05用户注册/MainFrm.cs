@@ -49,7 +49,7 @@ namespace _05用户注册
                         MessageBox.Show("该用户名以存在");
                     }
 
-                    cmd.CommandText = string.Format("insert into userInfo (userName,password)values('{0}','{1}');", txtUserName.Text.Trim(), txtPsw.Text.Trim());
+                    cmd.CommandText = string.Format("insert into szmUserInfo (userName,UserPwd)values('{0}','{1}');", txtUserName.Text.Trim(), txtPsw.Text.Trim());
                     int infulenceRow = cmd.ExecuteNonQuery();
                     MessageBox.Show("注册成功");
 

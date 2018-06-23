@@ -71,7 +71,7 @@ namespace _04用户登录
                         //也就是代码中的sql语句带有变量时，我们是这样写的
                         //使用@txtUerName 和@UserPwd
 
-                        cmd.CommandText = " select count(1) from userInfo where userName=@txtUerName  and password=@UserPwd";
+                        cmd.CommandText = " select count(1) from szmUserInfo where UserName=@txtUerName  and UserPwd=@UserPwd";
                         cmd.Parameters.AddWithValue("@txtUerName ", txtUerName.Text.Trim());
                         cmd.Parameters.AddWithValue("@UserPwd", txtPwd.Text.Trim());
 

@@ -27,6 +27,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12快速增删改查（crud
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13观察者模式（非委托实现）+中介者模式", "13观察者模式（非委托实现）+中介者模式\13观察者模式（非委托实现）+中介者模式.csproj", "{D6F57781-E6B1-405E-B36D-B2BD317E43E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14使用SqlDataReader实现显示用户信息表", "14使用SqlDataReader实现显示用户信息表\14使用SqlDataReader实现显示用户信息表.csproj", "{8C915769-AD61-44E4-BCE0-08235FD5338F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15完整的数据库增删改查", "15完整的数据库增删改查\15完整的数据库增删改查.csproj", "{EF4D0BF2-E165-4C99-9FF1-4EB8BB7C5092}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15完整的数据库增删改查-优化", "15完整的数据库增删改查 - 优化\15完整的数据库增删改查-优化.csproj", "{7062AF16-9255-454E-A904-11AD081534C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -85,6 +91,18 @@ Global
 		{D6F57781-E6B1-405E-B36D-B2BD317E43E4}.Debug|x86.Build.0 = Debug|x86
 		{D6F57781-E6B1-405E-B36D-B2BD317E43E4}.Release|x86.ActiveCfg = Release|x86
 		{D6F57781-E6B1-405E-B36D-B2BD317E43E4}.Release|x86.Build.0 = Release|x86
+		{8C915769-AD61-44E4-BCE0-08235FD5338F}.Debug|x86.ActiveCfg = Debug|x86
+		{8C915769-AD61-44E4-BCE0-08235FD5338F}.Debug|x86.Build.0 = Debug|x86
+		{8C915769-AD61-44E4-BCE0-08235FD5338F}.Release|x86.ActiveCfg = Release|x86
+		{8C915769-AD61-44E4-BCE0-08235FD5338F}.Release|x86.Build.0 = Release|x86
+		{EF4D0BF2-E165-4C99-9FF1-4EB8BB7C5092}.Debug|x86.ActiveCfg = Debug|x86
+		{EF4D0BF2-E165-4C99-9FF1-4EB8BB7C5092}.Debug|x86.Build.0 = Debug|x86
+		{EF4D0BF2-E165-4C99-9FF1-4EB8BB7C5092}.Release|x86.ActiveCfg = Release|x86
+		{EF4D0BF2-E165-4C99-9FF1-4EB8BB7C5092}.Release|x86.Build.0 = Release|x86
+		{7062AF16-9255-454E-A904-11AD081534C5}.Debug|x86.ActiveCfg = Debug|x86
+		{7062AF16-9255-454E-A904-11AD081534C5}.Debug|x86.Build.0 = Debug|x86
+		{7062AF16-9255-454E-A904-11AD081534C5}.Release|x86.ActiveCfg = Release|x86
+		{7062AF16-9255-454E-A904-11AD081534C5}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

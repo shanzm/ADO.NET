@@ -79,6 +79,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\szmDemo.sql" />
     <Content Include="bin\Debug\数据.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
