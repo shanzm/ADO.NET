@@ -11,9 +11,9 @@ using System.Threading;
 
 
 ///cmd.ExecuteReader();他返回的是reader指针指向的行的数据(建项目07)
-///注意ExecuteNoQuery为执行非查询命令，比如插入，删除等，返回值是受影响的行数
-///注意ExecuteScalar查询结果返回的结果的第一个单元格的数值
-
+///注意ExecuteNoQuery()为执行非查询命令，比如插入，删除等，返回值是受影响的行数
+///注意ExecuteScalar()查询结果返回的结果的第一个单元格的数值
+///ExcuteTable()返回一张DateTable
 
 
 

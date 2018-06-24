@@ -100,26 +100,42 @@ namespace _15完整的数据库增删改查
                 return;
             }
 
+            #region 未优化代码
+            //string connStr = SqlHelper.GetConnStr();
+            //using (SqlConnection conn = new SqlConnection(connStr))
+            //{
+            //    using (SqlCommand cmd = conn.CreateCommand())
+            //    {
+            //        conn.Open();
+            //        cmd.CommandText = @"UPDATE [db_Tome1].[dbo].[szmUserInfo]SET [DelFlag]=1 WHERE [Id]=@userId";
+            //        cmd.Parameters.AddWithValue("@userId", deleteId);
+            //        int affectRows = cmd.ExecuteNonQuery();
+            //        if (affectRows >= 1)
+            //        {
+            //            MessageBox.Show("删除成功");
+            //        }
+            //        //删除后重新加载数据，刷新表格
+            //        LoadUserInfo();
+            //    }
+            //} 
+            #endregion
 
             int deleteId = int.Parse(this.dgvUserInfo.SelectedRows[0].Cells["Id"].Value.ToString());
 
-            string connStr = SqlHelper.GetConnStr();
-            using (SqlConnection conn = new SqlConnection(connStr))
+            string sqlStr = @"UPDATE [db_Tome1].[dbo].[szmUserInfo]SET [DelFlag]=1 WHERE [Id]=@UserId";
+            //☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
+            //注意参数new SqlParameter (@"UserID",(object)deleteId )
+            //一个对象可以作为该对象类型的数组的子类
+            int affectRows = SqlHelper.ExecuteNonQuery(sqlStr, new SqlParameter(@"UserID", (object)deleteId));
+
+            if (affectRows >= 1)
             {
-                using (SqlCommand cmd = conn.CreateCommand())
-                {
-                    conn.Open();
-                    cmd.CommandText = @"UPDATE [db_Tome1].[dbo].[szmUserInfo]SET [DelFlag]=1 WHERE [Id]=@userId";
-                    cmd.Parameters.AddWithValue("@userId", deleteId);
-                    int affectRows = cmd.ExecuteNonQuery();
-                    if (affectRows >= 1)
-                    {
-                        MessageBox.Show("删除成功");
-                    }
-                    //删除后重新加载数据，刷新表格
-                    LoadUserInfo();
-                }
+                MessageBox.Show("删除成功");
             }
+
+            LoadUserInfo();
+
+
 
         }
         #endregion
@@ -198,12 +214,12 @@ namespace _15完整的数据库增删改查
                         MessageBox.Show("保存成功！");
                     }
                 }
-            } 
+            }
             //LoadUserInfo();
             //我们想在查询后，做修改，点保存按钮后，我们还是只显示查询出来的行，所以不使用数据加载函数LoadUserInfo()来刷新窗口
             //而是调用查询按钮的代码，我们没有给查询按钮的查询代码封装，但是我们直接在这里模拟点击按钮一下就可以了
             //注意输入的参数(this,null)
-            btnSearch_Click(this,null);
+            btnSearch_Click(this, null);
         }
         #endregion
 
@@ -314,7 +330,7 @@ namespace _15完整的数据库增删改查
 
             // 查询后把结果显示在DateGridView中
             LoadUserInfoToDateGridView(sqlStr, parameterList.ToArray());
-            
+
 
 
         }
@@ -327,43 +343,67 @@ namespace _15完整的数据库增删改查
         /// </summary>
         /// <param name="sqlStr"></param>
         /// <param name="parameterList"></param>
-        private void LoadUserInfoToDateGridView(string sqlStr,  params SqlParameter[] parameterList)
+        private void LoadUserInfoToDateGridView(string sqlStr, params SqlParameter[] parameters)
         {
             string conn = SqlHelper.GetConnStr();
             List<UserInfo> userInfoList = new List<UserInfo>();
-             
-            using (SqlDataAdapter adapter = new SqlDataAdapter( sqlStr, conn))
+
+            #region 未优化代码
+            //using (SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn))
+            //{
+            //    //☆☆☆☆☆☆☆☆☆☆注意adapter的使用，给SqlStr语句中的参数赋值☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
+            //    adapter.SelectCommand.Parameters.AddRange(parameterList);
+
+            //    DataTable dt = new DataTable();
+            //    adapter.Fill(dt);
+
+            //    if (dt == null)
+            //    {
+            //        return;
+            //    }
+
+            //    foreach (DataRow item in dt.Rows)
+            //    {
+            //        UserInfo user = new UserInfo();
+            //        user.Id = int.Parse(item["id"].ToString());
+            //        user.UserName = item["UserName"].ToString();
+            //        user.UserPwd = item["UserPwd"].ToString();
+            //        user.LastErrorDateTime = DateTime.Parse(item["LastErrorDateTime"].ToString());
+            //        user.ErrorTimes = item["ErrorTimes"] == DBNull.Value ? 0 : int.Parse(item["ErrorTimes"].ToString());
+            //        user.DelFlag = short.Parse(item["DelFlag"].ToString());
+            //        //注意这一句代码中的SqlDateTime和MinValue
+            //        user.CreateDate = DateTime.Parse(item["CreateDate"] == DBNull.Value ? SqlDateTime.MinValue.ToString() : item["CreateDate"].ToString());
+            //        userInfoList.Add(user);
+            //    }//end foreach
+            //    this.dgvUserInfo.DataSource = userInfoList;
+            //}  
+            #endregion
+
+            DataTable dt = SqlHelper.ExecuteDataTable(sqlStr, parameters);
+
+            if (dt == null)
             {
-                //☆☆☆☆☆☆☆☆☆☆注意adapter的使用，给SqlStr语句中的参数赋值☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
-                adapter.SelectCommand.Parameters.AddRange(parameterList);
+                return;
+            }
 
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
+            foreach (DataRow item in dt.Rows)
+            {
+                UserInfo user = new UserInfo();
+                user.Id = int.Parse(item["id"].ToString());
+                user.UserName = item["UserName"].ToString();
+                user.UserPwd = item["UserPwd"].ToString();
+                user.LastErrorDateTime = DateTime.Parse(item["LastErrorDateTime"].ToString());
+                user.ErrorTimes = item["ErrorTimes"] == DBNull.Value ? 0 : int.Parse(item["ErrorTimes"].ToString());
+                user.DelFlag = short.Parse(item["DelFlag"].ToString());
+                //注意这一句代码中的SqlDateTime和MinValue
+                user.CreateDate = DateTime.Parse(item["CreateDate"] == DBNull.Value ? SqlDateTime.MinValue.ToString() : item["CreateDate"].ToString());
+                userInfoList.Add(user);
+            }
+            this.dgvUserInfo.DataSource = userInfoList;
 
-                if (dt == null)
-                {
-                    return;
-                }
-
-                foreach (DataRow item in dt.Rows)
-                {
-                    UserInfo user = new UserInfo();
-                    user.Id = int.Parse(item["id"].ToString());
-                    user.UserName = item["UserName"].ToString();
-                    user.UserPwd = item["UserPwd"].ToString();
-                    user.LastErrorDateTime = DateTime.Parse(item["LastErrorDateTime"].ToString());
-                    user.ErrorTimes = item["ErrorTimes"] == DBNull.Value ? 0 : int.Parse(item["ErrorTimes"].ToString());
-                    user.DelFlag = short.Parse(item["DelFlag"].ToString());
-                    //注意这一句代码中的SqlDateTime和MinValue
-                    user.CreateDate = DateTime.Parse(item["CreateDate"] == DBNull.Value ? SqlDateTime.MinValue.ToString() : item["CreateDate"].ToString());
-                    userInfoList.Add(user);
-                }//end foreach
-                this.dgvUserInfo.DataSource = userInfoList;
-            } this.dgvUserInfo.DataSource = userInfoList;
-        }
         #endregion
 
-
+        }
 
 
 

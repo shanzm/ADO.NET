@@ -102,7 +102,7 @@ namespace _14使用SqlDataReader实现显示用户信息表
 
                 //☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆
                 //注意SqlParameter的使用方式
-                //第一个参数是sql语句中要替换的东西，第二个东西的在数据库中的类型（使用SqlDBType这个枚举类型来选取）
+                //第一个参数是sql语句中要替换的参数，第二个是这个参数在数据库中的类型（使用SqlDBType这个枚举类型来选取）
                 SqlParameter param = new SqlParameter("@UserId" + i, SqlDbType.Int);
                 param.Value = int.Parse(rows[i].Cells["Id"].Value.ToString());
                 parameterList.Add(param);
