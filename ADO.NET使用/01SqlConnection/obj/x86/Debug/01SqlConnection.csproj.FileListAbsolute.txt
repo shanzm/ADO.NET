@@ -1,6 +1,0 @@
-D:\Documents\Visual Studio 2010\Projects\ADO.NET\01SqlConnection\bin\Debug\01SqlConnection.exe
-D:\Documents\Visual Studio 2010\Projects\ADO.NET\01SqlConnection\bin\Debug\01SqlConnection.pdb
-D:\Documents\Visual Studio 2010\Projects\ADO.NET\01SqlConnection\obj\x86\Debug\01SqlConnection.exe
-D:\Documents\Visual Studio 2010\Projects\ADO.NET\01SqlConnection\obj\x86\Debug\01SqlConnection.pdb
-F:\ForGit\ADO.NET\ADO.NET使用\01SqlConnection\obj\x86\Debug\01SqlConnection.exe
-F:\ForGit\ADO.NET\ADO.NET使用\01SqlConnection\obj\x86\Debug\01SqlConnection.pdb

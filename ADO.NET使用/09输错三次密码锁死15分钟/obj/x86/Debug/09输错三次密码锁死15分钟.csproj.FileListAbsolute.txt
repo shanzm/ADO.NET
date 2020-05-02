@@ -1,9 +1,0 @@
-D:\Documents\Visual Studio 2010\Projects\ADO.NET\09输错三次密码锁死15分钟\bin\Debug\09输错三次密码锁死15分钟.exe
-D:\Documents\Visual Studio 2010\Projects\ADO.NET\09输错三次密码锁死15分钟\bin\Debug\09输错三次密码锁死15分钟.pdb
-D:\Documents\Visual Studio 2010\Projects\ADO.NET\09输错三次密码锁死15分钟\obj\x86\Debug\_09输错三次密码锁死15分钟.Properties.Resources.resources
-D:\Documents\Visual Studio 2010\Projects\ADO.NET\09输错三次密码锁死15分钟\obj\x86\Debug\09输错三次密码锁死15分钟.csproj.GenerateResource.Cache
-D:\Documents\Visual Studio 2010\Projects\ADO.NET\09输错三次密码锁死15分钟\obj\x86\Debug\09输错三次密码锁死15分钟.exe
-D:\Documents\Visual Studio 2010\Projects\ADO.NET\09输错三次密码锁死15分钟\obj\x86\Debug\09输错三次密码锁死15分钟.pdb
-D:\Documents\Visual Studio 2010\Projects\ADO.NET\09输错三次密码锁死15分钟\bin\Debug\09输错三次密码锁死15分钟.exe.config
-D:\Documents\Visual Studio 2010\Projects\ADO.NET\09输错三次密码锁死15分钟\obj\x86\Debug\_09输错三次密码锁死15分钟.TestFrm.resources
-D:\Documents\Visual Studio 2010\Projects\ADO.NET\09输错三次密码锁死15分钟\obj\x86\Debug\_09输错三次密码锁死15分钟.LogInFrm.resources

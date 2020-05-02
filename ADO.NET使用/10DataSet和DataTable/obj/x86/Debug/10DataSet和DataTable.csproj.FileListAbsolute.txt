@@ -1,4 +1,0 @@
-D:\Documents\Visual Studio 2010\Projects\ADO.NET\10DataSet和DataTable\bin\Debug\10DataSet和DataTable.exe
-D:\Documents\Visual Studio 2010\Projects\ADO.NET\10DataSet和DataTable\bin\Debug\10DataSet和DataTable.pdb
-D:\Documents\Visual Studio 2010\Projects\ADO.NET\10DataSet和DataTable\obj\x86\Debug\10DataSet和DataTable.exe
-D:\Documents\Visual Studio 2010\Projects\ADO.NET\10DataSet和DataTable\obj\x86\Debug\10DataSet和DataTable.pdb
