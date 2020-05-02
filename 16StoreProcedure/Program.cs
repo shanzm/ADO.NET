@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,13 @@ namespace _16StoreProcedure
     class Program
     {
         static void Main(string[] args)
+        {
+            //TransferAccounts();
+            ReturnDataTable();
+        }
+
+        //使用存储过程实现转账
+        private static void TransferAccounts()
         {
             //转出账户的Id
             int from = 1;
@@ -40,6 +48,18 @@ namespace _16StoreProcedure
                 case 1: Console.WriteLine($"success:从Id:{from}转账{balance}元到Id：{to}"); break;
                 case 2: Console.WriteLine("error"); break;
                 case 3: Console.WriteLine("余额不足"); break;
+            }
+            Console.ReadKey();
+        }
+
+        //使用存储过程返回DataTable
+        private static void ReturnDataTable()
+        {
+            DataTable dt = SqlHelper.GetDataTable("pro_ReturnDataTable", CommandType.StoredProcedure);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                Console.WriteLine(row["用户ID"].ToString()+":"+row["余额"].ToString ());
             }
             Console.ReadKey();
         }
