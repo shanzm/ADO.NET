@@ -2,3 +2,5 @@ D:\Documents\Visual Studio 2010\Projects\ADO.NET\02SqlCommand\bin\Debug\02SqlCom
 D:\Documents\Visual Studio 2010\Projects\ADO.NET\02SqlCommand\bin\Debug\02SqlCommon.pdb
 D:\Documents\Visual Studio 2010\Projects\ADO.NET\02SqlCommand\obj\x86\Debug\02SqlCommon.exe
 D:\Documents\Visual Studio 2010\Projects\ADO.NET\02SqlCommand\obj\x86\Debug\02SqlCommon.pdb
+F:\ForGit\ADO.NET\ADO.NET使用\02SqlCommand\obj\x86\Debug\02SqlCommon.exe
+F:\ForGit\ADO.NET\ADO.NET使用\02SqlCommand\obj\x86\Debug\02SqlCommon.pdb
