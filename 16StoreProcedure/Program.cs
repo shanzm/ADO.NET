@@ -12,8 +12,8 @@ namespace _16StoreProcedure
     {
         static void Main(string[] args)
         {
-            //TransferAccounts();
-            ReturnDataTable();
+            TransferAccounts();
+         //   ReturnDataTable();
         }
 
         //使用存储过程实现转账
@@ -35,8 +35,9 @@ namespace _16StoreProcedure
                 new SqlParameter ("@from",from),
                 new SqlParameter("@to",to),
                 new SqlParameter ("@balance",balance),
-                //设置为输出参数
+                //设置为输出参数(注意输入输出参数的参数化只能按照下面的书写方式)
                 new SqlParameter ("@returnNum",System.Data.SqlDbType.Int) {Direction=System.Data.ParameterDirection.Output }
+                //错误方式：new SqlParameter ("@returnNum",ParameterDirection.Output)
             };
 
             SqlHelper.ExecuteNonquery("pro_transfer_szmbank", System.Data.CommandType.StoredProcedure, param);
@@ -59,7 +60,7 @@ namespace _16StoreProcedure
 
             foreach (DataRow row in dt.Rows)
             {
-                Console.WriteLine(row["用户ID"].ToString()+":"+row["余额"].ToString ());
+                Console.WriteLine(row["用户ID"].ToString() + ":" + row["余额"].ToString());
             }
             Console.ReadKey();
         }
