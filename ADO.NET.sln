@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01SqlConnection", "01SqlConnection\01SqlConnection.csproj", "{08B0324F-44F0-490D-A7FE-AFC88631126E}"
 EndProject
@@ -36,6 +36,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15完整的数据库增删改查-优化", "15完整的数据库增删改查 - 优化\15完整的数据库增删改查-优化.csproj", "{7062AF16-9255-454E-A904-11AD081534C5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16StoreProcedure", "16StoreProcedure\16StoreProcedure.csproj", "{1630D8B7-3369-4DC7-A5D9-07208B1221C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00微软SqlHelper类", "00微软SqlHelper类\00微软SqlHelper类.csproj", "{01080A3F-A999-4BF4-9E05-9E1043E91187}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -149,8 +151,19 @@ Global
 		{1630D8B7-3369-4DC7-A5D9-07208B1221C1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1630D8B7-3369-4DC7-A5D9-07208B1221C1}.Release|x86.ActiveCfg = Release|Any CPU
 		{1630D8B7-3369-4DC7-A5D9-07208B1221C1}.Release|x86.Build.0 = Release|Any CPU
+		{01080A3F-A999-4BF4-9E05-9E1043E91187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01080A3F-A999-4BF4-9E05-9E1043E91187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01080A3F-A999-4BF4-9E05-9E1043E91187}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{01080A3F-A999-4BF4-9E05-9E1043E91187}.Debug|x86.Build.0 = Debug|Any CPU
+		{01080A3F-A999-4BF4-9E05-9E1043E91187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01080A3F-A999-4BF4-9E05-9E1043E91187}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01080A3F-A999-4BF4-9E05-9E1043E91187}.Release|x86.ActiveCfg = Release|Any CPU
+		{01080A3F-A999-4BF4-9E05-9E1043E91187}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4E97019-8B7F-457A-8773-E2F5493FCBB9}
 	EndGlobalSection
 EndGlobal
