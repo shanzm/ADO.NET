@@ -1,6 +1,6 @@
 ﻿using Oracle.ManagedDataAccess.Client;
-using System;
 using System.Data;
+using System.Data.SqlClient;
 //using System.Data.OracleClient;
 
 //参考：https://www.cnblogs.com/gdjlc/p/10965845.html
@@ -15,6 +15,8 @@ namespace _17连接Oracle数据库
     {
         private static readonly string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["connStringForOracle"].ToString();
 
+
+        //创建连接对象
         public static OracleConnection GetConn()
         {
             var conn = new OracleConnection(connectionString);
@@ -22,26 +24,60 @@ namespace _17连接Oracle数据库
             return conn;
         }
 
-        public static int ExecNonQuery(string sql)
+        //执行非查询语句返回受影响行数
+        public static int ExecuteNoQuery(string sql,CommandType type=CommandType.Text,params SqlParameter[] param)
         {
             using (var conn = GetConn())
             {
-                var cmd = new OracleCommand(sql, conn);
-                int result = cmd.ExecuteNonQuery();
-                return result;
+                using (OracleCommand cmd=new OracleCommand (sql,conn))
+                {
+                    if (null!=param)
+                    {
+                        cmd.Parameters.AddRange(param);
+                    }
+                    cmd.CommandType = type;
+                    conn.Open();
+                    return cmd.ExecuteNonQuery();
+                }
             }
         }
 
-        public static int ExecuteScalar(string sql)
+        //返回查询结果的第一行第一个单元格的数据
+        public static object ExecuteScalar(string sql,CommandType type=CommandType.Text,params SqlParameter[] param)
         {
             using (var conn = GetConn())
             {
-                var cmd = new OracleCommand(sql, conn);
-                object o = cmd.ExecuteScalar();
-                return Convert.ToInt32(o.ToString());
+                using (OracleCommand cmd=new OracleCommand(sql,conn))
+                {
+                    if (null!=param)
+                    {
+                        cmd.Parameters.AddRange(param);
+                    }
+                    cmd.CommandType = type;
+                    conn.Open();
+                    return cmd.ExecuteScalar();
+                }
             }
         }
 
+        //返回查询结果集
+        public static DataSet GetDataSet(string sql, CommandType type = CommandType.Text, params SqlParameter[] param)
+        {
+            using (var conn = GetConn())
+            {
+                using (OracleDataAdapter adapter = new OracleDataAdapter(sql, conn))
+                {
+                    if (null != param)
+                    {
+                        adapter.SelectCommand.Parameters.AddRange(param);
+                    }
+                    adapter.SelectCommand.CommandType = type;
+                    DataSet ds = new DataSet();
+                    adapter.Fill(ds);
+                    return ds;
+                }
+            }
+        }
 
         public static OracleDataReader ExecuteReader(string sql)
         {
@@ -49,18 +85,6 @@ namespace _17连接Oracle数据库
             var cmd = new OracleCommand(sql, conn);
             var myReader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
             return myReader;
-        }
-
-        public static DataSet GetDataSet(string sql)
-        {
-            using (var conn = GetConn())
-            {
-                var cmd = new OracleCommand(sql, conn);
-                OracleDataAdapter da = new OracleDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-                return ds;
-            }
         }
 
     }
