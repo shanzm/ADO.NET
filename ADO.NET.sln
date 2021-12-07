@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16StoreProcedure", "16Store
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00微软SqlHelper类", "00微软SqlHelper类\00微软SqlHelper类.csproj", "{01080A3F-A999-4BF4-9E05-9E1043E91187}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17连接Oracle数据库", "17连接Oracle数据库\17连接Oracle数据库.csproj", "{2BBA3382-D421-4E7B-92DD-6B54A2213E27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +161,14 @@ Global
 		{01080A3F-A999-4BF4-9E05-9E1043E91187}.Release|Any CPU.Build.0 = Release|Any CPU
 		{01080A3F-A999-4BF4-9E05-9E1043E91187}.Release|x86.ActiveCfg = Release|Any CPU
 		{01080A3F-A999-4BF4-9E05-9E1043E91187}.Release|x86.Build.0 = Release|Any CPU
+		{2BBA3382-D421-4E7B-92DD-6B54A2213E27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BBA3382-D421-4E7B-92DD-6B54A2213E27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BBA3382-D421-4E7B-92DD-6B54A2213E27}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2BBA3382-D421-4E7B-92DD-6B54A2213E27}.Debug|x86.Build.0 = Debug|Any CPU
+		{2BBA3382-D421-4E7B-92DD-6B54A2213E27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BBA3382-D421-4E7B-92DD-6B54A2213E27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BBA3382-D421-4E7B-92DD-6B54A2213E27}.Release|x86.ActiveCfg = Release|Any CPU
+		{2BBA3382-D421-4E7B-92DD-6B54A2213E27}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
