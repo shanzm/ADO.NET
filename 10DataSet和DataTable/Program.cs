@@ -80,8 +80,8 @@ namespace _10DataSet和DataTable
             ds.Tables.Add(tbStudent);
 
             //建立tbClass两列
-            DataColumn ClassID = new DataColumn("ClassID", typeof(System.String));
-            DataColumn ClassName = new DataColumn("ClassName", typeof(System.String));
+            DataColumn ClassID = new DataColumn("ClassID", typeof(string));
+            DataColumn ClassName = new DataColumn("ClassName", typeof(string));
             //设定ClassID列不允许为空
             ClassID.AllowDBNull = false;
             //把列加入tbClass表
@@ -91,9 +91,9 @@ namespace _10DataSet和DataTable
             tbClass.PrimaryKey = new DataColumn[] { ClassID };
 
             //建立tbStudent的三列
-            DataColumn StudentID = new DataColumn("StudentID", typeof(System.String));
-            DataColumn StudentName = new DataColumn("StudentName", typeof(System.String));
-            DataColumn StudentClassID = new DataColumn("StudentClassID", typeof(System.String));
+            DataColumn StudentID = new DataColumn("StudentID", typeof(string));
+            DataColumn StudentName = new DataColumn("StudentName", typeof(string));
+            DataColumn StudentClassID = new DataColumn("StudentClassID", typeof(string));
             //设定StudentID列不允许为空
             StudentID.AllowDBNull = false;
             //把列加入tbStudent表
@@ -122,6 +122,18 @@ namespace _10DataSet和DataTable
                 //把行加入tbStudent表
                 tbStudent.Rows.Add(tbStudentRow);
             }
+
+            #region 快速给Datatable添加行数据
+
+            tbClass.Rows.Add(Guid.NewGuid(), "一年级二班");
+            tbClass.Rows.Add(Guid.NewGuid(), "二年级三班");
+            tbClass.Rows.Add(Guid.NewGuid(), "三年级四班");
+
+            tbStudent.Rows.Add(Guid.NewGuid(), "张三", tbClass.Rows[0].Field<string>("ClassID"));
+            tbStudent.Rows.Add(Guid.NewGuid(), "李四", tbClass.Rows[1].Field<string>("ClassID"));
+            tbStudent.Rows.Add(Guid.NewGuid(), "王五", tbClass.Rows[2].Field<string>("ClassID"));
+
+            #endregion
 
             foreach (DataRow row in tbClass.Rows)
             {
