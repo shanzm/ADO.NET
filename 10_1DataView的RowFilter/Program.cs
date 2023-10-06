@@ -15,7 +15,7 @@ namespace _10_1DataView的RowFilter
             //TestDataView();
             //TestColumnFilter();
 
-            Test.DemonstrateRowVersion();
+            TestDataViewRowState.Test();
 
             Console.ReadKey();
         }
@@ -50,6 +50,7 @@ namespace _10_1DataView的RowFilter
             DataTable dt = GetDataTable();
             DataView dataView = dt.DefaultView;
 
+            //新增一行
             DataRowView dataRowView = dataView.AddNew();
             dataRowView["Id"] = 9;
             dataRowView["Name"] = "小明";
@@ -57,12 +58,15 @@ namespace _10_1DataView的RowFilter
 
             Printer.PrintDataTable(dataView.ToTable(), "新添加一行");
 
+            //删除一行
             dataView.Delete(0);
             Printer.PrintDataTable(dataView.ToTable(), "按照索引，删除第一行");
 
+            //按照指定字段排序
             dataView.Sort = "CreateTime ASC";
             Printer.PrintDataTable(dataView.ToTable(), "按照CreateTime字段顺序排序");
 
+            //默认排序
             dataView.ApplyDefaultSort = true;
             Printer.PrintDataTable(dataView.ToTable(), "默认按照主键列 升序排列");
         }

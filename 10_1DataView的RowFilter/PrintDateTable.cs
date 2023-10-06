@@ -15,6 +15,10 @@ namespace _10_1DataView的RowFilter
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"{title}");
+            if (dt == null)
+            {
+                return;
+            }
             //拼接列头
             string colName = "";
             foreach (DataColumn column in dt.Columns)
@@ -27,6 +31,12 @@ namespace _10_1DataView的RowFilter
             //循环打印每一行
             foreach (DataRow row in dt.Rows)
             {
+                //跳过删除的行（否则报错："不能通过已删除的行访问该行的信息"）
+                if (row.RowState == DataRowState.Deleted)
+                {
+                    continue;
+                }
+
                 //拼接行数据
                 string strRow = "";
                 foreach (object item in row.ItemArray)
