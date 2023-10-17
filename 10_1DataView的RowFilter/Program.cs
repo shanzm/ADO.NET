@@ -13,9 +13,9 @@ namespace _10_1DataView的RowFilter
         {
             //TestToTable();
             //TestDataView();
-            //TestColumnFilter();
+            TestColumnFilter();
 
-            TestDataViewRowState.Test();
+            //TestDataViewRowState.Test();
 
             Console.ReadKey();
         }
@@ -108,7 +108,9 @@ namespace _10_1DataView的RowFilter
             dataView.RowFilter = $"Age+10>30";
             Printer.PrintDataTable(dataView.ToTable(), $"Age+10>30");
 
-            //8.
+            //8.聚合函数
+            dataView.RowFilter = $"Age >AVG(Age)";
+            Printer.PrintDataTable(dataView.ToTable(), "Age >AVG(Age)");
         }
 
         //构建测试数据源
